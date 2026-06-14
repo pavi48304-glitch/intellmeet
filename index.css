@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #0f172a;
+    background-image: url('/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #f8fafc;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbar Styles for Premium Look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.7);
+}
+
+/* Custom Glassmorphism classes */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-heavy {
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-input {
+  background: rgba(17, 24, 39, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.glass-input:focus {
+  border-color: rgba(168, 85, 247, 0.6);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.25);
+  outline: none;
+}
+
+/* Micro-Animations & Glows */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(56, 189, 248, 0.05), 0 0 10px rgba(56, 189, 248, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.15), 0 0 15px rgba(56, 189, 248, 0.1);
+  }
+}
+
+.glow-cyan {
+  animation: pulse-glow 3s infinite ease-in-out;
+}
+
+@keyframes pulse-glow-purple {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(168, 85, 247, 0.05), 0 0 10px rgba(168, 85, 247, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.15), 0 0 15px rgba(168, 85, 247, 0.1);
+  }
+}
+
+.glow-purple {
+  animation: pulse-glow-purple 3s infinite ease-in-out;
+}
+
+/* Custom CSS-only Chart Bars/Gradients */
+.gradient-text {
+  background: linear-gradient(135deg, #06b6d4 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Floating Emoji Animations */
+@keyframes floatUpEmoji {
+  0% {
+    transform: translateY(0) scale(0.6) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(-20px) scale(1.2) rotate(5deg);
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-160px) scale(0.8) rotate(-10deg);
+    opacity: 0;
+  }
+}
+
+.animate-float-emoji {
+  animation: floatUpEmoji 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Raised Hand Pulse Glow Animations */
+@keyframes pulse-glow-amber {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(245, 158, 11, 0.3), 0 0 10px rgba(245, 158, 11, 0.1);
+    border-color: rgba(245, 158, 11, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.7), 0 0 25px rgba(245, 158, 11, 0.4);
+    border-color: rgba(245, 158, 11, 0.8);
+  }
+}
+
+.glow-amber {
+  animation: pulse-glow-amber 2.5s infinite ease-in-out;
+}
+

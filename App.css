@@ -1,0 +1,4 @@
+/* App-specific custom global overrides */
+.meeting-room-active {
+  overflow: hidden;
+}
